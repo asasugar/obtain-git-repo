@@ -17,13 +17,14 @@
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "pnpm lint -- --fix",
     "prepare": "node shell.js",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --allow-empty",
     "prepublishOnly": "pnpm build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
     "src/*.{js,ts}": [
-      "pnpm lint:fix"
+      "pnpm lint:fix",
+      "git add"
     ]
   },
   "devDependencies": {
