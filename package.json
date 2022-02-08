@@ -1,5 +1,5 @@
 {
-  "name": "download-git-repo-next",
+  "name": "obtain-git-repo",
   "version": "1.0.0",
   "description": "Download and extract a git repository (GitHub, GitLab, Bitbucket) from node. Support es5 es6 Typescript.",
   "main": "dist/index.js",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asasugar/download-git-repo-next.git"
+    "url": "git+https://github.com/asasugar/obtain-git-repo.git"
   },
   "keywords": [
     "github",
@@ -53,14 +53,14 @@
     "download-git",
     "download-git-repo",
     "download-git-repo-mjs",
-    "download-git-repo-next"
+    "obtain-git-repo"
   ],
   "author": "asasugar <xxj95719@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/asasugar/download-git-repo-next/issues"
+    "url": "https://github.com/asasugar/obtain-git-repo/issues"
   },
-  "homepage": "https://github.com/asasugar/download-git-repo-next#readme",
+  "homepage": "https://github.com/asasugar/obtain-git-repo#readme",
   "packageManager": "pnpm@6.30.0",
   "dependencies": {
     "download": "^8.0.0",
