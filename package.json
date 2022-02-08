@@ -1,0 +1,71 @@
+{
+  "name": "download-git-repo-next",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Download and extract a git repository (GitHub, GitLab, Bitbucket) from node. Support es5 es6 Typescript.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "pnpm build -- --watch",
+    "build": "node shell.js && tsup src/index.ts --dts --format cjs,esm",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "pnpm lint -- --fix",
+    "husky": "husky install",
+    "prepublishOnly": "pnpm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "pnpm lint:fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.16.1",
+    "@types/download": "^8.0.1",
+    "@types/git-clone": "^0.2.0",
+    "@types/node": "^17.0.16",
+    "@types/rimraf": "^3.0.2",
+    "eslint": "^8.8.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
+    "shelljs": "^0.8.5",
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asasugar/download-git-repo-next.git"
+  },
+  "keywords": [
+    "github",
+    "gitlab",
+    "bitbucket",
+    "repo",
+    "repository",
+    "tar",
+    "extract",
+    "tarball",
+    "download",
+    "download-git",
+    "download-git-repo",
+    "download-git-repo-mjs",
+    "download-git-repo-next"
+  ],
+  "author": "asasugar <xxj95719@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asasugar/download-git-repo-next/issues"
+  },
+  "homepage": "https://github.com/asasugar/download-git-repo-next#readme",
+  "packageManager": "pnpm@6.30.0",
+  "dependencies": {
+    "download": "^8.0.0",
+    "git-clone": "^0.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
