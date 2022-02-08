@@ -13,10 +13,11 @@
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",
-    "build": "node shell.js && tsup src/index.ts --dts --format cjs,esm",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "pnpm lint -- --fix",
-    "husky": "husky install",
+    "prepare": "node shell.js",
+    "lint-staged": "lint-staged",
     "prepublishOnly": "pnpm build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
