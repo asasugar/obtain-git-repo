@@ -8,6 +8,14 @@ Download and extract a git repository (GitHub, GitLab, Bitbucket) from node. Sup
     $ yarn add obtain-git-repo // use yarn
     $ npm i obtain-git-repo // use npm
 
+```js
+
+const { download } = require('obtain-git-repo'); // commonjs 
+
+import { download } from 'obtain-git-repo'; // es Module
+download(repository, destination, options, callback);
+```
+
 ## API
 
 ### download(repository, destination, options, callback)

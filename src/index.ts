@@ -14,7 +14,7 @@ import rimraf from 'rimraf'
  * @param {Function} fn
  */
 
-function download(
+export function download(
   repo: string,
   dest: string,
   opts: { clone?: boolean; headers?: Record<string, string> } | null,
@@ -187,5 +187,3 @@ function getUrl(
 
   return url
 }
-
-export default download
